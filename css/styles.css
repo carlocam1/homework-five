@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px;
+}
+
+.site-container {
+  max-width: 1280px;
+  min-height: 300px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: GillSans;
+  src: url(../css/fonts/GillSans.ttc);
+}
+@font-face {
+  font-family: ProximaNovaScOsfExtraCondensed;
+  src: url(../css/fonts/ProximaNovaScOsfExtraCondensed.ttf);
+}
+nav {
+  position: fixed;
+  min-height: 90px;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #000;
+  z-index: 99;
+}
+nav .logo {
+  width: 92px;
+  height: 42px;
+}
+nav .links {
+  height: 42px;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+nav .links a {
+  text-decoration: none;
+  font-family: GillSans;
+  color: #000;
+  font-size: 15px;
+}
+nav .links a span {
+  color: #79ADDC;
+  margin-left: 22px;
+}
+
+@media only screen and (max-width: 665px) {
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.about {
+  max-width: 980px;
+  min-height: 720px;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: GillSans;
+}
+.about .underline {
+  position: relative;
+  min-height: 60px;
+  margin-bottom: 39px;
+}
+.about p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.about .underline::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  border-bottom: 2px solid red;
+  width: 15%;
+  left: 0;
+  bottom: 0;
+}
+.about .about-info {
+  position: relative;
+  min-height: 195px;
+}
+.about .about-info h1 {
+  margin-top: 110px;
+  text-transform: uppercase;
+  font-size: 60px;
+}
+.about .quote-container {
+  margin-top: 107px;
+  min-height: 230px;
+}
+.about .quote-container h1 {
+  font-size: 40px;
+}
+.about .quote-container .about-person {
+  position: relative;
+  max-width: 665px;
+  min-height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 37px;
+}
+.about .quote-container .about-person img {
+  width: 250px;
+  height: 150px;
+}
+.about .quote-container .about-person .about-quote {
+  width: 385px;
+  font-style: italic;
+}
+.about .quote-container .about-person .author {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media only screen and (max-width: 680px) {
+  .about .quote-container .about-person {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .quote-container .about-person .author {
+    position: unset;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .about {
+    margin: 0 auto;
+    max-width: 665px;
+  }
+  .about h1 {
+    text-align: center;
+  }
+  .about .underline::after {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1000px) and (max-width: 680px) {
+  .about {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .site-container {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(#79ADDC), to(#fff));
+    background-image: linear-gradient(#fff, #79ADDC, #fff);
+  }
+}
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #79ADDC;
+}
+footer .footer-container {
+  margin: 0 auto;
+  max-width: 1080px;
+  height: 100%;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footer-container .copyright {
+  color: #fff;
+  font-size: 12px;
+  font-family: Gillsans;
+}
+footer .footer-container .icons img {
+  height: 70px;
+}
